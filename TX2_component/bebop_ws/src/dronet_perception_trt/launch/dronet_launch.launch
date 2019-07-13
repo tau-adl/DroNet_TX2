@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="namespace" default="bebop" />
+    <node name="dronet_perception_trt" pkg="dronet_perception_trt" type="dronet_perception_trt" output="screen">      
+        <remap from="cnn_predictions" to="/cnn_out/predictions"/>
+        <remap from="state_change" to="$(arg namespace)/state_change"/>
+        <remap from="camera" to="$(arg namespace)/image_raw"/>
+        <remap from="land" to="$(arg namespace)/land"/>
+        <param name="uff_path" value="$(find dronet_perception_trt)/models/model_tensorrt.uff"/>
+        <param name="onboard_images_folder" value="$(find dronet_perception_trt)/onboard_images"/>
+        <param name="target_size" value="200, 200"/>
+        <param name="crop_size" value="150, 150"/>
+
+  </node>
+
+</launch>
+
