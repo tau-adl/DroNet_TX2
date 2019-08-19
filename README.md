@@ -45,10 +45,10 @@ Alternatively, flash a cloned image with the entire project/prerequisites alread
 •	Launch dronet_bebop.launch, dronet_launch.launch (from dronet_perception) and deep_navigation.launch (in this order). This will connect to the drone and stream the video feed into the neural network, displaying its predictions. The prediction will then be picked up by the control block that can send commands to the drone (OFF by default)  
 •	To issue the drone to start to fly, send the command  
 `rostopic pub --once /bebop/takeoff std_msgs/Empty}`  
-WARNING: THE DRONE WILL NOW START TO HOVER
+WARNING: THE DRONE WILL NOW START TO HOVER  
 •	To issue the autonomous navigation, send the command  
 `rostopic pub --once /bebop/state_change std_msgs/Bool "data: true"`  
-WARNING: THE DRONE WILL NOW SELF NAVIGATE
+WARNING: THE DRONE WILL NOW SELF NAVIGATE  
 •	To stop the autonomous navigation, send the command `rostopic pub --once /bebop/state_change std_msgs/Bool "data: false"`  
 •	To order the drone to land, send the command `rostopic pub --once /bebop/land std_msgs/Empty`
 
@@ -61,10 +61,10 @@ On the Jetson TX2:
 •	Launch dronet_bebop.launch, dronet_launch.launch (from dronet_perception_trt) and deep_navigation.launch (in this order). This will connect to the drone and stream the video feed into the neural network, displaying its predictions. The prediction will then be picked up by the control block that can send commands to the drone (OFF by default)  
 •	To issue the drone to start to fly, send the command  
 `rostopic pub --once /bebop/takeoff std_msgs/Empty}`  
-WARNING: THE DRONE WILL NOW START TO HOVER
+WARNING: THE DRONE WILL NOW START TO HOVER  
 •	To issue the autonomous navigation, send the command  
 `rostopic pub --once /bebop/state_change std_msgs/Bool "data: true"`  
-WARNING: THE DRONE WILL NOW SELF NAVIGATE
+WARNING: THE DRONE WILL NOW SELF NAVIGATE  
 •	To stop the autonomous navigation, send the command  
 `rostopic pub --once /bebop/state_change std_msgs/Bool "data: false"`  
 •	To order the drone to land, send the command  
