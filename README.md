@@ -1,6 +1,6 @@
 # Dronet implementation on TX2
 
-See full project description in the project report .doc file
+### See full project description in the project report .doc file
 
 ## Software Installation:
 
